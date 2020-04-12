@@ -1,0 +1,17 @@
+# system files
+.DS_Store
+Thumbs.db
+.#*.*
+
+# vscode settings
+.vscode
+.history
+
+# generated files
+.sass-cache
+node_modules
+
+# wpms and wordpress files
+/wp-config.php
+/wp-content/uploads/*
+/wp-content/cache/*
