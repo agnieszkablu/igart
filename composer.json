@@ -1,0 +1,24 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+        "type":"composer",
+        "url":"https://composer.deliciousbrains.com/C2BB8D67CB42364CDCF32CD7F79FADB9"
+    }
+  ],
+  "config": {
+    "vendor-dir": "wp-content/mu-plugins",
+    "bin-dir": "bin"
+  },
+  "require": {
+    "advanced-custom-fields/advanced-custom-fields": "*",
+    "wpackagist-plugin/regenerate-thumbnails": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "*",
+    "wpackagist-plugin/autoptimize": "*",
+    "wpackagist-plugin/svg-support": "*"
+  }
+}

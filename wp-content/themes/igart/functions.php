@@ -7,10 +7,12 @@
  * @package igart
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
-}
+define( 'SITE_VERSION', 'v1.0.0' );
+
+/**
+ * Register Navigation Walker
+ */
+require get_template_directory() . '/inc/walkers/bs4navwalker.php';
 
 if ( ! function_exists( 'igart_setup' ) ) :
 	/**
@@ -50,7 +52,7 @@ if ( ! function_exists( 'igart_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'igart' ),
+				'primary' => esc_html__( 'Primary', 'igart' ),
 			)
 		);
 
@@ -141,11 +143,15 @@ add_action( 'widgets_init', 'igart_widgets_init' );
  * Enqueue scripts and styles.
  */
 function igart_scripts() {
-	wp_enqueue_style( 'igart-style', get_stylesheet_uri(), array(), _S_VERSION );
+	 // Theme stylesheet.
+   wp_enqueue_style( 'igart-style', get_template_directory_uri() . '/css/style.css', array (), SITE_VERSION );
 
-	wp_enqueue_script( 'igart-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	wp_enqueue_script( 'igart-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), _S_VERSION, true );
+   wp_enqueue_script( 'igart-script-vendor', get_template_directory_uri() . '/js/script-vendor.min.js', array ( 'jquery' ), SITE_VERSION, true );
+ 
+   wp_enqueue_script( 'igart-script', get_template_directory_uri() . '/js/script.min.js', array (
+     'jquery',
+     'igart-script-vendor'
+   ), SITE_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
