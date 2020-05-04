@@ -34,12 +34,9 @@
 
     <header id="masthead" class="site-header">
       <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container container-xl">
-          <?php
-          the_custom_logo();
-          ?>
+        <div class="container">
           <a class="navbar-brand nav-default" href="/">
-            <img data-no-lazy="1" src="<?= esc_url(get_template_directory_uri()); ?>/assets/images/logo.svg">
+            <img data-no-lazy="1" src="<?= esc_url(get_template_directory_uri()); ?>/assets/images/igart.svg">
           </a>
           <?php get_template_part('template-parts/menu', 'primary'); ?>
         </div>
