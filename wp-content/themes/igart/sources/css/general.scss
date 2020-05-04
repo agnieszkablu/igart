@@ -1,0 +1,31 @@
+// General
+body {
+  overflow-x: hidden;
+  padding-top: $navbar-height;
+
+  @include media-breakpoint-down(md) {
+    font-size: 15px;
+  }
+
+  @supports (position: sticky) {
+
+    padding-top: $navbar-height - 1;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+    }
+  }
+}
+
+//Has to be like that to work
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+//Prevent elements from overflowing
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}

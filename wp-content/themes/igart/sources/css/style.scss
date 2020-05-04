@@ -47,13 +47,13 @@ Version: 1.0
 // @import "../../node_modules/owl.carousel/src/scss/owl.theme.default";
 
 // @import "icons";
-// @import "variables";
+@import "variables";
 // @import "mixins";
-// @import "general";
+ @import "general";
 // @import "alignments";
 // @import "utilities";
 // @import "buttons";
-// @import "navbar";
+ @import "navbar";
 // @import "offcanvas";
 // @import "container";
 // @import "footer";

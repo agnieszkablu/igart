@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="<?= esc_url(get_template_directory_uri()); ?>/assets/images/favicons/favicon-16x16.png">
   <meta name="msapplication-TileColor" content="#ff5e31">
   <meta name="theme-color" content="#ff5e31">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,21 +12,24 @@
 
 ?>
 
-	</div><!-- #content -->
+</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+<footer id="colophon" class="site-footer">
+  <div class="container">
+    <div class="site-info">
       IGArt
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'igart' ), 'igart', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+      <span class="sep"> | </span>
+      <?php
+      /* translators: 1: Theme name, 2: Theme author. */
+      printf(esc_html__('Theme: %1$s by %2$s.', 'igart'), 'igart', '<a href="http://underscores.me/">Underscores.me</a>');
+      ?>
+    </div><!-- .site-info -->
+  </div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
