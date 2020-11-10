@@ -153,6 +153,11 @@ function igart_scripts()
   // Theme stylesheet.
   wp_enqueue_style('igart-style', get_template_directory_uri() . '/css/style.css', array(), SITE_VERSION);
 
+   // TRICKY SECTION
+  // We load here script-vendor-header.min.js script under jquery name because some of plugins needs it and they check only script name (very stupid)
+  wp_deregister_script('jquery');
+  wp_enqueue_script('jquery', get_template_directory_uri() . '/js/script-vendor-header.min.js', array(), SITE_VERSION, false);
+
   wp_enqueue_script('igart-script-vendor', get_template_directory_uri() . '/js/script-vendor.min.js', array('jquery'), SITE_VERSION, true);
 
   wp_enqueue_script('igart-script', get_template_directory_uri() . '/js/script.min.js', array(

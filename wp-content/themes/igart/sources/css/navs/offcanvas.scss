@@ -1,0 +1,125 @@
+/*
+* Off Canvas
+* --------------------------------------------------`
+*/
+
+@include media-breakpoint-down(md) {
+
+  //Opened
+  .menu-open {
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden !important;
+
+    // .navbar {
+    //   &::before {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     background-color: $gray-100;
+    //     z-index: 1001;
+    //     height: $navbar-height - 3;
+    //     content: '';
+    //   }
+    // }
+
+    .nav-offcanvas {
+      right: 0;
+      height: 100%;
+      opacity: 1;
+      z-index: 1000;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+
+      .nav-offcanvas-inner {
+        height: 100vh;
+        justify-content: space-between;
+        width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+    }
+
+    //Menu toggler
+    .menu-toggler {
+      .menu-toggler-line {
+        width: 80%;
+        margin: 0 auto;
+        background-color: $gray-900;
+      }
+
+      .line-1 {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .line-2 {
+        opacity: 0;
+      }
+
+      .line-3 {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  //Menu
+  .navbar {
+    .collapse {
+      display: block;
+    }
+  }
+
+  .nav-offcanvas {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    background-color: $white;
+  }
+}
+
+//Menu toggler animation
+.navbar-toggler {
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.menu-toggler {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  transform: translateZ(0);
+  transition: opacity .35s;
+  cursor: pointer;
+}
+
+.menu-toggler-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(0) translateZ(0);
+  transition: background-color .35s, transform .175s cubic-bezier(.215, .61, .355, 1), opacity .175s cubic-bezier(.215, .61, .355, 1);
+  background-color: $gray-900;
+
+  &.line-1 {
+    top: 5px;
+  }
+
+  &.line-2 {
+    top: 13px;
+  }
+
+  &.line-3 {
+    top: 21px;
+  }
+}

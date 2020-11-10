@@ -31,16 +31,12 @@
   <?php wp_body_open(); ?>
   <div id="page" class="site">
     <a class="sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'igart'); ?></a>
-
-    <header id="masthead" class="site-header">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-          <a class="navbar-brand nav-default" href="/">
-            <img data-no-lazy="1" src="<?= esc_url(get_template_directory_uri()); ?>/assets/images/igart.svg">
-          </a>
-          <?php get_template_part('template-parts/menu', 'primary'); ?>
-        </div>
-      </nav>
-    </header><!-- #masthead -->
-
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+      <div class="container">
+        <a class="navbar-brand nav-default" href="/">
+          <img data-no-lazy="1" src="<?= esc_url(get_template_directory_uri()); ?>/assets/images/igart.svg">
+        </a>
+        <?php get_template_part('template-parts/menu', 'primary'); ?>
+      </div>
+    </nav>
     <div id="content" class="site-content">

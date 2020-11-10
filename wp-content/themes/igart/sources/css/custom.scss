@@ -38,7 +38,7 @@ $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:     #f29580;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
@@ -71,11 +71,11 @@ $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
-$danger:        $red !default;
+$danger:        $red;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-$theme-colors: () !default;
+$theme-colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
@@ -113,7 +113,7 @@ $escaped-characters: (
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-caret:                                true !default;
+$enable-caret:                                false;
 $enable-rounded:                              true !default;
 $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
@@ -178,7 +178,7 @@ $body-color:                $gray-900 !default;
 //
 // Style anchor elements.
 
-$link-color:                              theme-color("primary") !default;
+$link-color:                              $red;
 $link-decoration:                         none !default;
 $link-hover-color:                        darken($link-color, 15%) !default;
 $link-hover-decoration:                   underline !default;
@@ -288,7 +288,7 @@ $font-family-base:            $font-family-sans-serif;
 $font-size-base:              1.125rem; //18px
 $font-size-xl:                $font-size-base * 3.25;
 $font-size-lg:                $font-size-base * 2.25;
-$font-size-md:                $font-size-base * 1.1;
+$font-size-md:                $font-size-base * 1.5;
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-xs:                $font-size-base * .675;
 $font-size-xxs:               $font-size-base * .575;
@@ -750,9 +750,9 @@ $navbar-dark-disabled-color:        rgba($white, .25) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
-$navbar-light-color:                rgba($black, .5) !default;
-$navbar-light-hover-color:          rgba($black, .7) !default;
-$navbar-light-active-color:         rgba($black, .9) !default;
+$navbar-light-color:                $black;
+$navbar-light-hover-color:          $red;
+$navbar-light-active-color:         $red;
 $navbar-light-disabled-color:       rgba($black, .3) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;

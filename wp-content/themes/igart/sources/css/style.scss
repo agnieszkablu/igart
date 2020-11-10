@@ -49,11 +49,12 @@ Version: 1.0
 // @import "icons";
 @import "variables";
 // @import "mixins";
- @import "general";
+@import "general";
 // @import "alignments";
 // @import "utilities";
 // @import "buttons";
- @import "navbar";
+@import "navs/primary";
+@import "navs/offcanvas";
 // @import "offcanvas";
 // @import "container";
 // @import "footer";
