@@ -55,6 +55,7 @@ if (!function_exists('igart_setup')) :
     register_nav_menus(
       array(
         'primary' => esc_html__('Primary', 'igart'),
+        'footer' => esc_html__('Footer', 'igart'),
       )
     );
 
@@ -153,7 +154,7 @@ function igart_scripts()
   // Theme stylesheet.
   wp_enqueue_style('igart-style', get_template_directory_uri() . '/css/style.css', array(), SITE_VERSION);
 
-   // TRICKY SECTION
+  // TRICKY SECTION
   // We load here script-vendor-header.min.js script under jquery name because some of plugins needs it and they check only script name (very stupid)
   wp_deregister_script('jquery');
   wp_enqueue_script('jquery', get_template_directory_uri() . '/js/script-vendor-header.min.js', array(), SITE_VERSION, false);
