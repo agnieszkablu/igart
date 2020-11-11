@@ -13,7 +13,7 @@ $image_3_alt = get_post_meta(block_field('image-3', false), '_wp_attachment_imag
 $title_3 = block_field('title-3', false);
 $link_3 = block_field('link-3', false);
 ?>
-<div class="row mt-6 mb-3">
+<div class="section-three-col row mt-6 mb-3">
   <div class="col-sm-6 col-lg-4 mb-3">
     <div class="grid-item embed-responsive embed-responsive-1by1">
       <div class="grid-content embed-responsive-item">

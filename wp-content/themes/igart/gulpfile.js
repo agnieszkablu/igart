@@ -73,6 +73,7 @@
           'node_modules/bootstrap/js/dist/popover.js',
           'node_modules/bootstrap/js/dist/tab.js',
           'node_modules/object-fit-images/dist/ofi.min.js',
+          'node_modules/parallax-js/dist/parallax.min.js',
         ]
       },
       header_vendor_scripts: {

@@ -26,7 +26,7 @@ if ($menu) {
 
 </div><!-- #content -->
 
-<footer class="footer">
+<footer class="footer pb-3">
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-auto d-flex flex-column">
