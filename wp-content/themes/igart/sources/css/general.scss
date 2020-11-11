@@ -17,3 +17,14 @@ object,
 video {
   max-width: 100%;
 }
+
+.link-to-all {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 5;
+}

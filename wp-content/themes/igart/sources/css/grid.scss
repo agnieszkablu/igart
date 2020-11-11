@@ -1,0 +1,31 @@
+.grid-item {
+  border: 10px solid $gray-300;
+
+  .stretch-image {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover {
+    border-color: $red;
+
+    .stretch-image {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    h3 {
+      opacity: 0;
+    visibility: hidden;
+    }
+  }
+}
+
+.grid-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  text-align: center;
+}
